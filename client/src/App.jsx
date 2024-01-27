@@ -1,15 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import TodoForm from './components/TodoForm'
+import TodoResults from './components/TodoResults'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todos,setTodos] = useState([])
 
   return (
     <>
-      <TodoForm/>
-      <TodoResults/>
+      <TodoForm todos ={todos} setTodos={setTodos}/>
+      <TodoResults todos ={todos} setTodos ={setTodos}/>
     </>
   )
 }
