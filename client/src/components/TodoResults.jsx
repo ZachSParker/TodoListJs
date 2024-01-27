@@ -1,8 +1,23 @@
-import React from 'react'
+import {React,useState} from 'react'
 
-const TodoResults = () => {
+const TodoResults = (props) => {
+  const {todos,setTodos} = props
+  const destroyTodo = (index) => {
+    const updateTasks = todos.filter((_,idx) => idx !== index)
+    setTodos(updateTasks)
+
+  }
   return (
-    <div>TodoResults</div>
+    <div>
+      {
+        todos.map((item, index) => (
+          <div key={index}>
+            <p>{item.todo}</p>
+            <button onClick={ () => destroyTodo(index)}>Delete</button>
+          </div>
+        ))
+      }
+    </div>
   )
 }
 
