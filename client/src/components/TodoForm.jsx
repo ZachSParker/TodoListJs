@@ -3,7 +3,6 @@ import {React,useState} from 'react'
 const TodoForm = (props) => {
   const {todos,setTodos} = props
   const [todo,setTodo] = useState("")
-  const [isCompleted,setIsCompleted] = useState(false)
 
   const submitHandler = (e) => {
     e.preventDefault()
@@ -13,9 +12,9 @@ const TodoForm = (props) => {
   }
   return (
     <form onSubmit ={submitHandler}>
-      <label htmlFor="">Task</label>
+      <label htmlFor="todo">Task</label>
       <input type="text" value ={todo} name="todo" onChange={(e) => setTodo(e.target.value)} />
-      <input type="submit" value="add Task"/>
+      <input type="submit" value="Add"/>
     </form>
   )
 }
