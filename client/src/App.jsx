@@ -5,11 +5,10 @@ import './App.css'
 
 function App() {
   const [todos,setTodos] = useState([])
-  const [isCompleted,setIsCompleted] = useState(false)
   return (
     <>
-      <TodoForm todos ={todos} setTodos={setTodos} isCompleted={isCompleted} setIsCompleted={setIsCompleted}/>
-      <TodoResults todos ={todos} setTodos ={setTodos} isCompleted={isCompleted} setIsCompleted={setIsCompleted}/>
+      <TodoForm todos ={todos} setTodos={setTodos}/>
+      <TodoResults todos ={todos} setTodos ={setTodos} />
     </>
   )
 }
